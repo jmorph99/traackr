@@ -5,6 +5,7 @@
 --%>
 
 
+<%@page import="java.util.Iterator"%>
 <%@page import="java.util.Random"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.HashMap"%>
@@ -95,12 +96,18 @@
                 tmp = br.readLine();
                 continue;
             }
-            addToHast.add(first, names[1].trim());
-            addToHast.add(last, names[0].trim());
+            
             addToHast.addSet(full, arr[0].trim());
                tmp = br.readLine();
         }
         br.close();
+        Iterator<String> iter = full.iterator();
+        while(iter.hasNext()){
+            String[] nms = iter.next().split(",");
+            addToHast.add(first, nms[1].trim());
+            addToHast.add(last, nms[0].trim());
+        }
+            
         first = addToHast.sortHashMapByValues(first);
         last = addToHast.sortHashMapByValues(last);
         %>
