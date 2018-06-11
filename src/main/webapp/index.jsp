@@ -224,8 +224,6 @@
     String[] firstarr = first.keySet().toArray(new String[first.size()]);
     String[] lastarr = last.keySet().toArray(new String[last.size()]);
     Random r = new Random();
-    IntStream rfirst = r.ints(0,first.size()-1);
-    IntStream rlast = r.ints(0,last.size()-1);
     for(int i= 0;i < Integer.valueOf(modifiesCount); i++)
     {
             String fullname = "";
