@@ -228,15 +228,15 @@
     fn = last.keySet().toArray(new String[first.size()]);
     isFirst = true;
     HashSet<String> modnames = new HashSet<>();
-    String[] firstarr = first.keySet().toArray(new String[first.size()]);
-    String[] lastarr = last.keySet().toArray(new String[last.size()]);
+    
     Random r = new Random();
     for(int i= 0;i < Integer.valueOf(modifiesCount); i++)
     {
             String fullname = "";
             String lastname = "";
             String firstname = "";
-            
+            String[] firstarr = first.keySet().toArray(new String[first.size()]);
+            String[] lastarr = last.keySet().toArray(new String[last.size()]);
             while(true)
             {
                
